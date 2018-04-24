@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Fortnata Battle Royale Wallpapers</string>
+
+
+    <string name="set_wp">SET WALLPAPER</string>
+
+    <string name="set_wp_success">Congratulations, Your wallpaper has been chanced.</string>
+    <string name="set_wp_fail">Somethings wrong, Please try again after some time.</string>
+    <string name="loading">Loading, please wait...</string>
+
+    <string name="license">Copyright © 2018 Widerspiel This app under  Apache License, Version 2.0\nFrameworks : Glide ( Apache 2.0 ), Android Crop ( Apache 2.0 )\nThis app contains images for which are believed to be in public domain. Please notify us immediately if you own rights and it will be removed!</string>
+    <string name="share">Nice wallpapers, do you want try: https://play.google.com/store/apps/details?id=com.widerspiel.fornitebattleroyalewallpapers</string>
+
+    <string name="new_item">New</string>
+</resources>
