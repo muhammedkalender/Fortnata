@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1031505945022",
+    "firebase_url": "https://wallpapers-fortnata.firebaseio.com",
+    "project_id": "wallpapers-fortnata",
+    "storage_bucket": "wallpapers-fortnata.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031505945022:android:e1584a2550ad7b20",
+        "android_client_info": {
+          "package_name": "com.widerspiel.fortnatawallpapers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031505945022-sk4ac21v0tlel6lme5t0euk7kp1s9oiv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.widerspiel.fortnatawallpapers",
+            "certificate_hash": "acd360a8636ae1dc5cfa784795ce5224bc72bd9f"
+          }
+        },
+        {
+          "client_id": "1031505945022-k7jcafbv7feb6j4ajprfeiu757phrsil.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcC2gkpGFEi1MVKnOrf0uPMC-dO4_OF3Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031505945022-k7jcafbv7feb6j4ajprfeiu757phrsil.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
