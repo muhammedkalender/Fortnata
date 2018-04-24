@@ -5,6 +5,8 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.google.firebase.crash.FirebaseCrash;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -19,8 +21,8 @@ public class lib {
         Log.e("ERR_" + ERR_ID, ex.getMessage() + "");
 
         try {
-            //FirebaseCrash.log(ERR_ID + "");
-            //FirebaseCrash.report(ex);
+            FirebaseCrash.log(ERR_ID + "");
+            FirebaseCrash.report(ex);
         } catch (Exception sex) {
 
         }
@@ -30,8 +32,8 @@ public class lib {
         Log.e("ERR_" + ERR_ID, ex.getMessage() + "");
 
         try {
-            // FirebaseCrash.log(ERR_ID + "");
-            //FirebaseCrash.report(ex);
+            FirebaseCrash.log(ERR_ID + "");
+            FirebaseCrash.report(ex);
         } catch (Exception sex) {
 
         }
@@ -41,8 +43,8 @@ public class lib {
         Log.e("ERR_" + ERR_ID, ex.getMessage() + "");
 
         try {
-            // FirebaseCrash.log(ERR_ID + "");
-            // FirebaseCrash.report(ex);
+             FirebaseCrash.log(ERR_ID + "");
+            FirebaseCrash.report(ex);
         } catch (Exception sex) {
 
         }
@@ -52,8 +54,8 @@ public class lib {
         Log.e("ERR_" + ERR_ID, ex.getMessage() + "");
 
         try {
-            // FirebaseCrash.log(ERR_ID + "");
-            //  FirebaseCrash.report(ex);
+             FirebaseCrash.log(ERR_ID + "");
+              FirebaseCrash.report(ex);
         } catch (Exception sex) {
 
         }
@@ -63,9 +65,9 @@ public class lib {
         Log.e("ERR_" + ERR_ID, ex.getMessage() + " - " + MESSAGE);
 
         try {
-            //  FirebaseCrash.log(ERR_ID + "");
-            //  FirebaseCrash.log(MESSAGE);
-            //  FirebaseCrash.report(ex);
+              FirebaseCrash.log(ERR_ID + "");
+             FirebaseCrash.log(MESSAGE);
+             FirebaseCrash.report(ex);
         } catch (Exception sex) {
 
         }
@@ -75,8 +77,8 @@ public class lib {
         Log.e("ERR_OOM_" + ERR_ID, ex.getMessage() + "");
 
         try {
-            //  FirebaseCrash.log(ERR_ID + "");
-            //  FirebaseCrash.report(ex);
+              FirebaseCrash.log(ERR_ID + "");
+              FirebaseCrash.report(ex);
         } catch (Exception sex) {
 
         }
@@ -86,9 +88,9 @@ public class lib {
         Log.e("ERR_OOM_" + ERR_ID, ex.getMessage() + " - " + MESSAGE);
 
         try {
-            // FirebaseCrash.log(ERR_ID + "");
-            //  FirebaseCrash.log(MESSAGE);
-            //  FirebaseCrash.report(ex);
+            FirebaseCrash.log(ERR_ID + "");
+              FirebaseCrash.log(MESSAGE);
+              FirebaseCrash.report(ex);
         } catch (Exception sex) {
 
         }

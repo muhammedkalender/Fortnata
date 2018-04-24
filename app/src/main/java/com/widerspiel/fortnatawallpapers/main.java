@@ -22,6 +22,10 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 import com.theartofdev.edmodo.cropper.CropImage;
 
 import java.io.FileNotFoundException;
@@ -78,13 +82,13 @@ public class main extends AppCompatActivity {
 
                     CropImage.activity(Uri.parse(stringURI + list.get(index).uri())).setAspectRatio(ratioX, ratioY).start(main.this);
                 } catch (OutOfMemoryError ex) {
-                    //todo
+                    lib.message(R.string.set_wp_fail);
                 } catch (SecurityException ex) {
-                    //todo
+                    lib.message(R.string.set_wp_fail);
                 } catch (IllegalArgumentException ex) {
-                    //todo
+                    lib.message(R.string.set_wp_fail);
                 } catch (Exception ex) {
-//todo
+                    lib.message(R.string.set_wp_fail);
                 }
             }
         });
@@ -256,6 +260,8 @@ public class main extends AppCompatActivity {
         list.add(new preview(R.mipmap.w82, "#82", false));
 
         load(true);
+
+        loadAd(true);
     }
 
     @Override
@@ -363,10 +369,8 @@ public class main extends AppCompatActivity {
     int count = 0;
     boolean showPopup = false;
 
-    void loadAd(boolean a) {
 
-    }
-   /* todo InterstitialAd adsPopup;
+    InterstitialAd adsPopup;
 
     void loadAd(boolean isForce) {
         try {
@@ -375,10 +379,10 @@ public class main extends AppCompatActivity {
             if (count == 3 || isForce) {
                 try {
                     if (adsPopup == null) {
-
+                        MobileAds.initialize(this, getString(R.string.app_id));
                         adsPopup = new InterstitialAd(this);
 
-                        adsPopup.setAdUnitId(getString(R.string.ads_pop_up));
+                        adsPopup.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
                         adsPopup.setAdListener(new AdListener() {
                             @Override
                             public void onAdClosed() {
@@ -403,11 +407,11 @@ public class main extends AppCompatActivity {
                         showPopup = true;
                     }
                 } catch (Exception ex) {
-                lib.    err(736, ex);
+                    lib.err(736, ex);
                 }
             }
         } catch (Exception ex) {
             lib.err(666, ex);
         }
-    }*/
+    }
 }
