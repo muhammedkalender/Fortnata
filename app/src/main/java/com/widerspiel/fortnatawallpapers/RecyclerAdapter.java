@@ -64,6 +64,8 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
             if (list.get(position).isNew()) {
                 holder.tvNew.setVisibility(View.VISIBLE);
+            }else{
+                holder.tvNew.setVisibility(View.INVISIBLE);
             }
 
             Glide.with(lib.context).load(list.get(position).uri()).into(holder.thumbnail);

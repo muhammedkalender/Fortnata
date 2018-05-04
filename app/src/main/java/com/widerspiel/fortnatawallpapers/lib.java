@@ -12,7 +12,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class lib {
-    //TODO FİREBASE
     public static Context context;
 
     //region ERROR

@@ -1,11 +1,14 @@
 package com.widerspiel.fortnatawallpapers;
 
+import android.app.AlertDialog;
 import android.app.WallpaperManager;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -45,6 +48,8 @@ public class main extends AppCompatActivity {
     int ratioX;
     int ratioY;
 
+    int setType = 0;
+
     ArrayList<preview> list = new ArrayList<>();
 
     String stringURI;
@@ -78,9 +83,57 @@ public class main extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    int index = (int) v.getTag();
+                    final int index = (int) v.getTag();
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                        try {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(main.this);
+                            builder.setTitle(getString(R.string.set_wp_dialog));
+                            setType = 0;
+                            // add the buttons
+                            builder.setPositiveButton(getString(R.string.set_wp_all), new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    try {
+                                        setType = 0;
+                                        CropImage.activity(Uri.parse(stringURI + list.get(index).uri())).setAspectRatio(ratioX, ratioY).start(main.this);
+                                    } catch (Exception ex) {
+                                        lib.err(756, ex);
+                                    }
+                                }
+                            });
 
-                    CropImage.activity(Uri.parse(stringURI + list.get(index).uri())).setAspectRatio(ratioX, ratioY).start(main.this);
+                            builder.setNeutralButton(getString(R.string.set_wp_lock), new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    try {
+                                        setType = 2;
+                                        CropImage.activity(Uri.parse(stringURI + list.get(index).uri())).setAspectRatio(ratioX, ratioY).start(main.this);
+                                    } catch (Exception ex) {
+                                        lib.err(756, ex);
+                                    }
+                                }
+                            });
+
+                            builder.setNegativeButton(getString(R.string.set_wp_main), new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    try {
+                                        setType = 1;
+                                        CropImage.activity(Uri.parse(stringURI + list.get(index).uri())).setAspectRatio(ratioX, ratioY).start(main.this);
+                                    } catch (Exception ex) {
+                                        lib.err(756, ex);
+                                    }
+                                }
+                            });
+
+                            builder.create();
+                            builder.show();
+                        } catch (Exception ex) {
+                            lib.err(256, ex);
+                        }
+                    } else {
+                        CropImage.activity(Uri.parse(stringURI + list.get(index).uri())).setAspectRatio(ratioX, ratioY).start(main.this);
+                    }
                 } catch (OutOfMemoryError ex) {
                     lib.message(R.string.set_wp_fail);
                 } catch (SecurityException ex) {
@@ -175,6 +228,14 @@ public class main extends AppCompatActivity {
 
         //https://stackoverflow.com/a/9904752
         stringURI = "android.resource://" + getPackageName() + "/";
+
+        list.add(new preview(R.mipmap.w83, "#83", true));
+        list.add(new preview(R.mipmap.w84, "#84", true));
+        list.add(new preview(R.mipmap.w85, "#85", true));
+        list.add(new preview(R.mipmap.w86, "#86", true));
+        list.add(new preview(R.mipmap.w87, "#87", true));
+        list.add(new preview(R.mipmap.w88, "#88", true));
+        list.add(new preview(R.mipmap.w89, "#89", true));
 
         list.add(new preview(R.mipmap.w1, "#1", false));
         list.add(new preview(R.mipmap.w2, "#2", false));
@@ -298,7 +359,22 @@ public class main extends AppCompatActivity {
                                 try {
                                     InputStream input = getContentResolver().openInputStream(resultUri);
                                     Bitmap bitmap = Bitmap.createScaledBitmap(BitmapFactory.decodeStream(input), width, height, false);
-                                    wallpaperManager.setBitmap(bitmap);
+
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                                        try {
+                                            if (setType == 1 || setType == 0) {
+                                                wallpaperManager.setBitmap(bitmap, null, true, WallpaperManager.FLAG_SYSTEM);
+                                            }
+
+                                            if (setType == 2 || setType == 0) {
+                                                wallpaperManager.setBitmap(bitmap, null, true, WallpaperManager.FLAG_LOCK);
+                                            }
+                                        } catch (Exception ex) {
+                                            lib.err(256, ex);
+                                        }
+                                    } else {
+                                        wallpaperManager.setBitmap(bitmap);
+                                    }
 
                                     Glide.with(getApplicationContext()).load(bitmap).into(ivBackground);
 

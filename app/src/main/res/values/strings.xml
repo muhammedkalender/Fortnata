@@ -8,6 +8,11 @@
     <string name="set_wp_fail">Somethings wrong, Please try again after some time.</string>
     <string name="loading">Loading, please wait...</string>
 
+    <string name="set_wp_dialog">Choose one</string>
+    <string name="set_wp_all">Set Home and Lock Screen</string>
+    <string name="set_wp_main">Only Set Home Screen</string>
+    <string name="set_wp_lock">Only Set Lock Screen</string>
+
     <string name="license">Copyright © 2018 Widerspiel This app under  Apache License, Version 2.0\nFrameworks : Glide ( Apache 2.0 ), Android Crop ( Apache 2.0 )\nThis app contains images for which are believed to be in public domain. Please notify us immediately if you own rights and it will be removed!</string>
     <string name="share">Nice wallpapers, do you want try: https://play.google.com/store/apps/details?id=com.widerspiel.fornitebattleroyalewallpapers</string>
 
@@ -17,11 +22,13 @@
 
 
     <string name="app_id">ca-app-pub-4429271274448051~9025576732</string>
+    <!--
+          <string name="interstitial_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+
+      -->
+
     <string name="interstitial_ad_unit_id" translatable="false">ca-app-pub-4429271274448051/7712495066</string>
+     <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+     <string name="rewarded_video_ad_unity_id" translatable="false">ca-app-pub-3940256099942544/5224354917</string>
 
-<!--    <string name="interstitial_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
-
-    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="rewarded_video_ad_unity_id" translatable="false">ca-app-pub-3940256099942544/5224354917</string>
-    -->
 </resources>
