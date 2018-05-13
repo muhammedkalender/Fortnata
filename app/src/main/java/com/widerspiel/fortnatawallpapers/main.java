@@ -232,7 +232,7 @@ public class main extends AppCompatActivity {
         list.add(new preview(R.mipmap.w83, "#83", true));
         list.add(new preview(R.mipmap.w84, "#84", true));
         list.add(new preview(R.mipmap.w85, "#85", true));
-        list.add(new preview(R.mipmap.w86, "#86", true));
+        // list.add(new preview(R.mipmap.w86, "#86", true));
         list.add(new preview(R.mipmap.w87, "#87", true));
         list.add(new preview(R.mipmap.w88, "#88", true));
         list.add(new preview(R.mipmap.w89, "#89", true));

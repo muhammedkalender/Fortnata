@@ -23,11 +23,11 @@
 
     <string name="app_id">ca-app-pub-4429271274448051~9025576732</string>
     <!--
-          <string name="interstitial_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
 
+  <string name="interstitial_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
       -->
 
-    <string name="interstitial_ad_unit_id" translatable="false">ca-app-pub-4429271274448051/7712495066</string>
+     <string name="interstitial_ad_unit_id" translatable="false">ca-app-pub-4429271274448051/7712495066</string>
      <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
      <string name="rewarded_video_ad_unity_id" translatable="false">ca-app-pub-3940256099942544/5224354917</string>
 
