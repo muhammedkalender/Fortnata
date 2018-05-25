@@ -229,13 +229,25 @@ public class main extends AppCompatActivity {
         //https://stackoverflow.com/a/9904752
         stringURI = "android.resource://" + getPackageName() + "/";
 
-        list.add(new preview(R.mipmap.w83, "#83", true));
-        list.add(new preview(R.mipmap.w84, "#84", true));
-        list.add(new preview(R.mipmap.w85, "#85", true));
-        // list.add(new preview(R.mipmap.w86, "#86", true));
-        list.add(new preview(R.mipmap.w87, "#87", true));
-        list.add(new preview(R.mipmap.w88, "#88", true));
-        list.add(new preview(R.mipmap.w89, "#89", true));
+        list.add(new preview(R.mipmap.w90, "#90", true));
+        list.add(new preview(R.mipmap.w91, "#91", true));
+        list.add(new preview(R.mipmap.w92, "#92", true));
+        list.add(new preview(R.mipmap.w93, "#93", true));
+        list.add(new preview(R.mipmap.w94, "#94", true));
+        list.add(new preview(R.mipmap.w95, "#95", true));
+        list.add(new preview(R.mipmap.w96, "#96", true));
+        list.add(new preview(R.mipmap.w97, "#97", true));
+        list.add(new preview(R.mipmap.w98, "#98", true));
+        list.add(new preview(R.mipmap.w99, "#99", true));
+        list.add(new preview(R.mipmap.w100, "#100", true));
+        list.add(new preview(R.mipmap.w101, "#101", true));
+        list.add(new preview(R.mipmap.w102, "#102", true));
+        list.add(new preview(R.mipmap.w103, "#103", true));
+        list.add(new preview(R.mipmap.w104, "#104", true));
+        list.add(new preview(R.mipmap.w105, "#105", true));
+        list.add(new preview(R.mipmap.w106, "#106", true));
+        list.add(new preview(R.mipmap.w107, "#107", true));
+        list.add(new preview(R.mipmap.w108, "#108", true));
 
         list.add(new preview(R.mipmap.w1, "#1", false));
         list.add(new preview(R.mipmap.w2, "#2", false));
@@ -319,6 +331,13 @@ public class main extends AppCompatActivity {
         list.add(new preview(R.mipmap.w80, "#80", false));
         list.add(new preview(R.mipmap.w81, "#81", false));
         list.add(new preview(R.mipmap.w82, "#82", false));
+        list.add(new preview(R.mipmap.w83, "#83", false));
+        list.add(new preview(R.mipmap.w84, "#84", false));
+        list.add(new preview(R.mipmap.w85, "#85", false));
+        // list.add(new preview(R.mipmap.w86, "#86", false));
+        list.add(new preview(R.mipmap.w87, "#87", false));
+        list.add(new preview(R.mipmap.w88, "#88", false));
+        list.add(new preview(R.mipmap.w89, "#89", false));
 
         load(true);
 
